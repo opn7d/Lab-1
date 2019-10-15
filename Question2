@@ -1,0 +1,19 @@
+# list given from question, can change this to any other answer
+peoplelist = [('John', ('Physics', 80)), ('Daniel', ('Science', 90)), ('John', ('Science', 95)), ('Mark', ('Maths', 100)),
+              ('Daniel', ('History', 75)), ('Mark', ('Social', 95))]
+
+# create dictionary
+peopledict = dict()
+
+for i in peoplelist:
+    # set 'key' and 'value' to what it is in peoplelist, so it is easier to understand
+    key = i[0]
+    value = i[1]
+    # if key is new, add it to dict, if not, add it to the key
+    if key not in peopledict:
+        peopledict[key] = [value]
+    else:
+        peopledict[key].append(value)
+
+# prints results
+print(peopledict)
